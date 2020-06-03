@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import HeaderDashboard from '../components/HeaderDashboard';
+import HeaderDashboard from '../../src/components/dashboard/HeaderDashboard';
 import TodoDashboard from '../components/dashboard/TodoDashboard';
 
 function DashboardPage() {

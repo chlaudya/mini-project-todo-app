@@ -6,7 +6,7 @@ import {
 }
     from '@ant-design/icons';
 import { Checkbox, Button } from 'antd';
-import "./table.scss";
+import "../../assets/sass/table.scss";
 
 const onChange = (e) => {
     console.log(`checked = ${e.target.checked}`);
@@ -48,7 +48,7 @@ const TodoTable = props => (
                 ))
             ) : (
                     <tr>
-                        <td colSpan={6}>No users</td>
+                        <td colSpan={6}>No Task</td>
                     </tr>
                 )}
         </tbody>

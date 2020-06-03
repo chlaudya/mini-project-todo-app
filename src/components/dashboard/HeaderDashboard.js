@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar } from 'antd';
-import '../assets/sass/header.scss';
+import '../../assets/sass/header.scss';
 import { Link } from "react-router-dom";
 
 const HeaderDashboard = () => {

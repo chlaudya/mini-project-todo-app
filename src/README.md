@@ -7,7 +7,7 @@
 
 # user/register
 ```
-http://localhost:3000/MyTodoAPI/user/register
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/user/register
 ```
 _Method_
 ```
@@ -41,7 +41,7 @@ _Response (201)_ | Created
 
 # user/login
 ```
-http://localhost:3000/MyTodoAPI/user/login
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/user/login
 ```
 _Method_
 ```
@@ -72,7 +72,7 @@ _Response (201)_ | Created
 
 # user/profile
 ```
-http://localhost:3000/MyTodoAPI/user/profile
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/user/profile
 ```
 _Method_
 ```
@@ -106,7 +106,7 @@ _Response (200)_ | OK
 
 # user/updateProfile
 ```
-http://localhost:3000/MyTodoAPI/user/updateProfile
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/user/updateProfile
 ```
 _Method_
 ```
@@ -136,7 +136,7 @@ _Response (200)_ | OK
 
 # user/upload
 ```
-http://localhost:3000/MyTodoAPI/user/upload
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/user/upload
 ```
 _Method_
 ```
@@ -151,7 +151,7 @@ _Request Header_
 ```
 _Request Body form-data_
 ```
-{
+{   
 	image : choose_file_pict 
 }
 ```
@@ -165,7 +165,7 @@ _Response (200)_ | OK
 
 # user - todo/create
 ```
-http://localhost:3000/MyTodoAPI/todo/create
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/todo/create
 ```
 _Method_
 ```
@@ -210,7 +210,7 @@ _Response (201)_ | Created
 
 # user - todo/findAll
 ```
-http://localhost:3000/MyTodoAPI/todo/findAll
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/todo/findAll
 ```
 _Method_
 ```
@@ -276,7 +276,7 @@ _Response (200)_ | OK
 
 # user - todo/update/:id
 ```
-http://localhost:3000/MyTodoAPI/todo/update/1   
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/todo/update/1   
 ```
 _Method_
 ```
@@ -309,11 +309,11 @@ _Response (200)_ | OK
 
 # user - todo/delete/:id
 ```
-http://localhost:3000/MyTodoAPI/todo/delete/5
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/todo/delete/5
 ```
 _Method_
 ```
-    delete
+    DELETE
 ```
 _Request Header_
 ```
@@ -338,15 +338,15 @@ _Response (200)_ | OK
 
 # user - todo/findAllSortedImportanceDesc
 ```
-http://localhost:3000/MyTodoAPI/todo/findAllSortedImportanceDesc
-http://localhost:3000/MyTodoAPI/todo/findAllSortedImportanceAsc
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/todo/findAllSortedImportanceDesc
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/todo/findAllSortedImportanceAsc
 
-http://localhost:3000/MyTodoAPI/todo/findAllSortedCompletionDesc
-http://localhost:3000/MyTodoAPI/todo/findAllSortedCompletionAsc
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/todo/findAllSortedCompletionDesc
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/todo/findAllSortedCompletionAsc
 ```
 _Method_
 ```
-    get
+    GET
 ```
 _Request Header_
 ```
@@ -399,7 +399,7 @@ _Response (200)_ | OK
 
 # admin/login
 ```
-http://localhost:3000/MyTodoAPI/admin/login
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/admin/login
 ```
 _Method_
 ```
@@ -431,7 +431,7 @@ _Response (201)_ | Created
 
 # admin/findUser/:id
 ```
-http://localhost:3000/MyTodoAPI/admin/findUser/3
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/admin/findUser/3
 ```
 _Method_
 ```
@@ -469,7 +469,7 @@ _Response (200)_ | Ok
 
 # admin/searchUser : by email
 ```
-http://localhost:3000/MyTodoAPI/admin/searchUser
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/admin/searchUser
 ```
 _Method_
 ```
@@ -510,7 +510,7 @@ _Response (200)_ | Ok
 
 # admin/findAllUser
 ```
-http://localhost:3000/MyTodoAPI/admin/findAllUser
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/admin/findAllUser
 ```
 _Method_
 ```
@@ -561,7 +561,7 @@ _Response (200)_ | Ok
 
 # admin/update/:id
 ```
-http://localhost:3000/MyTodoAPI/admin/update/3
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/admin/update/3
 ```
 _Method_
 ```
@@ -590,9 +590,39 @@ _Response (201)_ | Created
 ```
 
 
+# admin/updateImage/:id
+```
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/admin/updateImage/3
+```
+_Method_
+```
+    PUT
+```
+_Request Header_
+```
+{
+    key : token
+    value : access_token response while admin login
+}
+```
+_Request Body form-data_
+```
+{
+	image : choose_file_pict 
+}
+```
+_Response (200)_ | OK
+```
+{
+    "status": "success",
+    "data": "Successfully created!"
+}
+```
+
+
 # admin/delete/:id
 ```
-http://localhost:3000/MyTodoAPI/admin/delete/3
+https://my-todo-mini-project.herokuapp.com/MyTodoAPI/admin/delete/3
 ```
 _Method_
 ```
@@ -602,7 +632,7 @@ _Request Header_
 ```
 {
     key : token
-    value : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoxLCJlbWFpbCI6ImFkbWluQG1haWwuY29tIiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTU5MTAyNjI0MX0.tmthQEe6KBAe23WA_aSHjKNoYQxVaojCRQzuXa66Aio
+    value : access_token response while admin login
 }
 ```
 _Request Body_
@@ -610,6 +640,39 @@ _Request Body_
 {
 	"name":"user_updated",
 	"email":"user_test@mail.com"
+}
+```
+_Response (200)_ | OK
+```
+{
+    "status": "success",
+    "data": "Successfully deleted!"
+}
+```
+
+# admin - todo/findUserTodoCompletionDesc/:id
+```
+http://localhost:3000/MyTodoAPI/todo/findUserTodoImportanceAsc/11
+http://localhost:3000/MyTodoAPI/todo/findUserTodoImportanceDesc/11
+
+http://localhost:3000/MyTodoAPI/todo/findUserTodoCompletionAsc/11
+http://localhost:3000/MyTodoAPI/todo/findUserTodoCompletionDesc/11
+```
+_Method_
+```
+    GET
+```
+_Request Header_
+```
+{
+    key : token
+    value : access_token response while admin login
+}
+```
+_Request Body_
+```
+{
+	empty
 }
 ```
 _Response (200)_ | OK
