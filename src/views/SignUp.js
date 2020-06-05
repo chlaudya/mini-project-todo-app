@@ -34,12 +34,22 @@ class SignUp extends Component {
         try {
             const res = await axios.post(`https://my-todo-mini-project.herokuapp.com/MyTodoAPI/user/register`, registerUser)
             if (res.data.status === "success") {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Thank You! Your account succesfully registered!',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                })
                 localStorage.setItem("access_token", res.data.data.access_token)
                 this.setState({ isLoading: false, name: "", email: "", password: "" })
                 this.props.history.push("/signin")
             }
         } catch (error) {
-            console.log(error)
+            
             this.setState({ isLoading: false, name: "", email: "", password: "" })
         }
     }
@@ -48,13 +58,13 @@ class SignUp extends Component {
         return (
             <Fragment>
                 <div className="signup-page">
-                    <div className="signup-page__welcome">
+                    <section className="signup-page__welcome">
                         <h1 className="signup-page__welcome--h1">Welcome Back!</h1>
                         <h5 className="signup-page__welcome--h5">To keep connected with us please</h5>
                         <h5 className="signup-page__welcome--h5">login with your personal info</h5>
                         <Link to="/signin"><button>SIGN IN</button></Link>
-                    </div>
-                    <div className="signup-page__created-account">
+                    </section>
+                    <section className="signup-page__created-account">
                         <h3>Created Account</h3>
                         <div className="signup-page__created-account__icon">
                             <a><FacebookFilled style={{ fontSize: '40px' }} /></a>
@@ -99,7 +109,7 @@ class SignUp extends Component {
                                 </button>
                             </form>
                         </div>
-                    </div>
+                    </section>
                 </div >
             </Fragment>
         )

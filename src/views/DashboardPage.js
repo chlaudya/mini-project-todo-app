@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import HeaderDashboard from '../../src/components/dashboard/HeaderDashboard';
-import TodoDashboard from '../components/dashboard/TodoDashboard';
+import React from 'react';
+import HeaderDashboard from '../components/dashboard/HeaderDashboard';
+import MenuDashboard from '../components/dashboard/MenuDashboard';
 
 function DashboardPage() {
 
     return (
         <div>
             <HeaderDashboard />
-            <TodoDashboard />
+            <MenuDashboard />
         </div>
 
     )

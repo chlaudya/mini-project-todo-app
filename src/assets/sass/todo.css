@@ -1,0 +1,47 @@
+.todo-list {
+    margin-top:20px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    
+  }
+  
+  .todo-list td, .todo-list th {
+    border: 1px solid rgb(230, 227, 227);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .todo-list tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .todo-list tr:hover {background-color: #ddd;}
+  
+  .todo-list th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgb(111, 165, 247);
+    color: white;
+  }
+
+  .card-todo{
+    padding-left: 10px;
+  }
+  .card-todo h1{
+    font-size: 20px;
+    margin-top:0px ;
+  }
+  .btn-add{
+    background-color: rgb(75, 161, 219);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 5px;
+    width:20%;
+    cursor: pointer;
+  }
+  .btn-add:hover {
+    transform: translateY(0rem);
+    background-color: rgb(33, 84, 192);
+  }

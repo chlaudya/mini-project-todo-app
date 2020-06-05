@@ -2,19 +2,18 @@
 .signup-page{
     background-color: #0078D7;
     margin: 0 auto;
-    position: relative;
-    height:100% auto;
+    position: absolute;
+    height: 100%;
     align-items: center;
     text-align: center;
-    max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
 
   
     &__welcome{
         position: absolute;
         left: 140px;
-        top: 180px;
-
+        top: 120px;
         h1{
             font-size: 64px;
             line-height: 75px;
@@ -48,11 +47,11 @@
     }
 
     &__created-account{
-        position: absolute;
+        position: relative;
         width: 450px;
         height: 600px;
         left: 800px;
-        top: 30px;
+        top: 20px;
         background: #FFFFFF;
         box-shadow: 10px 10px 25px #1F6AA6;
         border-radius: 35px;
@@ -70,12 +69,13 @@
 
         &__input{
             width: 400px;
-            margin: 10px 20px;
+            margin: 50px 30px;
             p{
-                margin-left: 50px;
+                font-style: oblique;
                 margin-top: 40px;
+                margin-bottom: 30px;
                 font-size: 18px;
-                color: #C4C4C4;
+                color: rgb(167, 161, 161);
             }
             &__input-txt{
                 margin-left: 15px;

@@ -1,25 +1,34 @@
 import React from 'react';
 import { Avatar } from 'antd';
+import axios from 'axios';
 import '../../assets/sass/header.scss';
 import { Link } from "react-router-dom";
+const baseUrl = "https://my-todo-mini-project.herokuapp.com/MyTodoAPI/";
 
-const HeaderDashboard = () => {
+class HeaderDashboard extends React.Component {
 
-    return (
-        <header className="header-dashboard">
-            <div className="header-dashboard__avatar">
-                <a><Avatar size={50} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-                    <h5>Username</h5>
-                </a>
-            </div>
-            <div className="header-dashboard__signout">
-                <a>Sign Out</a>
+    handleLogout = () => {
+        localStorage.clear()
+    }
 
-            </div>
+    render() {
+        return (
+            <header className="header-dashboard">
+                <div className="header-dashboard__avatar">
+                    <a><Avatar size={50} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                        <h5>Hello Friend...</h5>
+                    </a>
+                </div>
+                <div className="header-dashboard__signout">
+                    <Link to="/">
+                        <a onClick={this.handleLogout}>Sign Out</a>
+                    </Link>
 
-        </header>
-    )
+                </div>
 
+            </header>
+        )
+    }
 }
 
 export default HeaderDashboard;

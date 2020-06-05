@@ -2,13 +2,15 @@
 .signin-page{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0 auto;
-    position: relative;
-    height: 100% auto;
+    position: absolute;
+    height: 100%;
     align-items: center;
     text-align: center;
-    max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
-  
+    background-color: #0078D7;
+    z-index: 1;
+
     &__welcome{
         content: "";
         background-image: url(../img/write.jpeg) ;
@@ -67,32 +69,36 @@
     }
 
     &__login{
-        position: absolute;
+        position: relative;
         width: 450px;
         height: 600px;
         left: 780px;
-        top: 50px;
-        background: #FFFFFF;
+        top: 50px;        
+        display: block;
+        background-color: #0078D7;
         
         h3{
             font-size: 35px;
-            color: #0078D7;
+            font-style: bold;
+            color: rgb(222, 230, 236);
             margin-top: 10px;
         }
         &__icon a{
             justify-content: space-evenly;
-            color: rgb(147, 152, 158);
-            margin-left: 20px;
+            color: rgb(239, 242, 245);
+            padding-left: 20px;
         }
 
         &__input{
             width: 400px;
-            margin: 10px 20px;
+            margin: 50px 30px;
+
             p{
-                margin-left: 50px;
-                margin-top: 40px;
+                font-style: oblique;
+                margin-top: 50px;
+                margin-bottom: 50px;
                 font-size: 18px;
-                color: #C4C4C4;
+                color: rgb(255, 255, 255);
             }
             &__input-txt{
                 margin-top: 30px;
@@ -101,14 +107,14 @@
                 border: 2px solid rgb(160, 181, 209);
                 box-sizing: border-box;
                 border-radius: 5px;
-                color:  rgb(145, 135, 135);
+                color:  rgb(53, 50, 50);
             }
             &__input-button{
-                margin-left:-10px;
-                margin-top: 40px;
+                margin-top: 50px;
+                background: #2A75E6;
                 width: 200px;
                 height: 50px;
-                background: #2A75E6;
+                border: solid white;
                 border-radius: 100px;
                 color: white;
                 font-size: 15px;
