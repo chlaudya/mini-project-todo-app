@@ -49,7 +49,10 @@ class SignUp extends Component {
                 this.props.history.push("/signin")
             }
         } catch (error) {
-            
+            Swal.fire({
+                icon: "error",
+                text: "Oops something went wrong, please check the email or password"
+            })
             this.setState({ isLoading: false, name: "", email: "", password: "" })
         }
     }
